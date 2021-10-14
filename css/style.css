@@ -1,0 +1,62 @@
+body{
+    background-color: #FFE4C4;
+    font-family: Georgia;
+}
+ 
+
+section{
+    display:flex;
+    flex-direction: row;
+}
+
+section div{
+    margin:2rem;
+    border-radius: 1%;
+    border: 1px solid lightcoral;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+ul li:last-child{
+    font-weight: bold;
+}
+
+div h2{
+    margin: 1rem;
+    font-weight: bold;
+}
+
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo{
+    width:20rem;
+    margin:2rem
+}
+
+h1{
+    font-size: 4rem;
+}
+nav{
+    display: flex;
+    flex-direction: space-between;
+}
+
+.nav{
+    margin: 0 2rem;
+}
+
+
+
+#store-logo{
+    width: 100px;
+}
+
+li{
+    margin:1rem;
+}
