@@ -3,12 +3,27 @@ body{
     font-family: Georgia;
     color:#595959;
 }
- 
 
+main
+ 
+#cookie{
+    width: 80rem;
+}
 section{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+section img{
+    margin: 5rem;
+}
+
+.main-section{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items:center;
 }
 
 section div{

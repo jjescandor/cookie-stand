@@ -34,10 +34,10 @@ let seattleStore = {
         for (let i = 0; i < times.length; i++) {
             this.cookiesSoldEachHourArray.push(this.getCookieSalesPerHour());
             sum += this.cookiesSoldEachHourArray[i];
+            console.log(sum);
             let li = document.createElement('li');
-            li.textContent = `${times[i]} :  ${this.getCookieSalesPerHour()} cookies`;
+            li.textContent = `${times[i]} :  ${this.cookiesSoldEachHourArray[i]} cookies`;
             seattleSales.appendChild(li);
-
         }
         let totalSum = document.createElement('li');
         totalSum.textContent = `Total Cookie Sales : ${sum}`;
@@ -65,10 +65,10 @@ let tokyoStore = {
         for (let i = 0; i < times.length; i++) {
             this.cookiesSoldEachHourArray.push(this.getCookieSalesPerHour());
             sum += this.cookiesSoldEachHourArray[i];
+            console.log(sum);
             let li = document.createElement('li');
-            li.textContent = `${times[i]} :  ${this.getCookieSalesPerHour()} cookies`;
+            li.textContent = `${times[i]} :  ${this.cookiesSoldEachHourArray[i]} cookies`;
             tokyoSales.appendChild(li);
-
         }
         let totalSum = document.createElement('li');
         totalSum.textContent = `Total Cookie Sales : ${sum}`;
@@ -97,10 +97,10 @@ let dubaiStore = {
         for (let i = 0; i < times.length; i++) {
             this.cookiesSoldEachHourArray.push(this.getCookieSalesPerHour());
             sum += this.cookiesSoldEachHourArray[i];
+            console.log(sum);
             let li = document.createElement('li');
-            li.textContent = `${times[i]} :  ${this.getCookieSalesPerHour()} cookies`;
+            li.textContent = `${times[i]} :  ${this.cookiesSoldEachHourArray[i]} cookies`;
             dubaiSales.appendChild(li);
-
         }
         let totalSum = document.createElement('li');
         totalSum.textContent = `Total Cookie Sales : ${sum}`;
@@ -129,10 +129,10 @@ let parisStore = {
         for (let i = 0; i < times.length; i++) {
             this.cookiesSoldEachHourArray.push(this.getCookieSalesPerHour());
             sum += this.cookiesSoldEachHourArray[i];
+            console.log(sum);
             let li = document.createElement('li');
-            li.textContent = `${times[i]} :  ${this.getCookieSalesPerHour()} cookies`;
+            li.textContent = `${times[i]} :  ${this.cookiesSoldEachHourArray[i]} cookies`;
             parisSales.appendChild(li);
-
         }
         let totalSum = document.createElement('li');
         totalSum.textContent = `Total Cookie Sales : ${sum}`;
@@ -161,10 +161,10 @@ let limaStore = {
         for (let i = 0; i < times.length; i++) {
             this.cookiesSoldEachHourArray.push(this.getCookieSalesPerHour());
             sum += this.cookiesSoldEachHourArray[i];
+            console.log(sum);
             let li = document.createElement('li');
-            li.textContent = `${times[i]} :  ${this.getCookieSalesPerHour()} cookies`;
+            li.textContent = `${times[i]} :  ${this.cookiesSoldEachHourArray[i]} cookies`;
             limaSales.appendChild(li);
-
         }
         let totalSum = document.createElement('li');
         totalSum.textContent = `Total Cookie Sales : ${sum}`;
