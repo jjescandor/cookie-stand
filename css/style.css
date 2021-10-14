@@ -1,18 +1,21 @@
 body{
-    background-color: #FFE4C4;
+    background-color: #F0F8FF;
     font-family: Georgia;
+    color:#595959;
 }
  
 
 section{
     display:flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 section div{
     margin:2rem;
+    background-color: #778899;
     border-radius: 1%;
-    border: 1px solid lightcoral;
+    border: 1px solid lightslategrey;
     -webkit-box-shadow: 0 10px 6px -6px #777;
     box-shadow: 0 10px 6px -6px #777;
 }
@@ -45,10 +48,22 @@ h1{
 nav{
     display: flex;
     flex-direction: space-between;
+
+}
+
+a:hover{
+    color:orange;
+
+}
+
+a{
+    text-decoration: none;
+    color:#595959;
 }
 
 .nav{
     margin: 0 2rem;
+    font-size: 2rem;
 }
 
 
