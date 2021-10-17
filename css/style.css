@@ -113,5 +113,20 @@ table{
     border:1px solid grey;
     -webkit-box-shadow: 0 10px 6px -6px #777;
     box-shadow: 0 10px 6px -6px #777;
+}
 
+tfoot td{
+    color:#005580;
+}
+
+tr td:last-child{
+    color:  #ffcc99;
+}
+
+th:last-of-type{
+    color: #b3e0ff;
+}
+
+td:last-of-type{
+    color:white;
 }
