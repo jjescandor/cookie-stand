@@ -6,9 +6,9 @@ let cookieSalesPerStoreArray = [];
 let totalSalesPerHourArray = [];
 let storeInstanceArray = [];
 //HTML tags that are used as anchors for DOM manipulation 
-let cookieStoreHeader = document.getElementById('cookieStoreHeader')
-let cookieStoreSales = document.getElementById('cookieStoreSales');
-let salesPerHourFooter = document.getElementById('salesPerHourFooter')
+let cookieStoreHeader = document.querySelector('thead');
+let cookieStoreSales = document.querySelector('tbody');
+let salesPerHourFooter = document.querySelector('tfoot')
 //Object constructor function
 function CookieStore(location, min, max, avg) {
     this.location = location;
