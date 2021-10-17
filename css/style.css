@@ -72,13 +72,13 @@ h1{
 }
 
 a:hover{
-    color:orange;
+    color:#99ff99;
 
 }
 
 a{
     text-decoration: none;
-    color:lightgrey;
+    color:orange;
 }
 
 .nav{
