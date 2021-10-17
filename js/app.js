@@ -20,7 +20,8 @@ function CookieStore(location, min, max, avg) {
     this.cookiesSoldEachHourArray = [];
     //Generates randoom cookie sales per hour
     this.getCookieSalesPerHour = function () {
-        let cookiesPerHour = Math.ceil((Math.random() * (this.max - this.min + 1) + this.min) * this.avg);
+        let cookiesPerHour = Math.ceil(Math.floor(Math.random() * (this.max - this.min + 1)
+            + this.min) * this.avg);
         return cookiesPerHour;
     };
     //Renders tbody section of the Table which is invoked in renderCookieStoreTableHeader()
@@ -44,7 +45,7 @@ function CookieStore(location, min, max, avg) {
     storeInstanceArray.push(this);
 }
 
-//Instances of the CookieStore object
+//Instances of the CookieStore object constructor function
 new CookieStore('Seattle', 23, 65, 6.3);
 new CookieStore('Tokyo', 3, 24, 1.2);
 new CookieStore('Dubai', 11, 38, 3.7);
@@ -90,7 +91,7 @@ function renderTableFooter() {
     totalSalesInAllStores.textContent = totalOfTotal;
     totalSalesHourTitle.appendChild(totalSalesInAllStores);
 }
-//Invokes the entire program
+//Invokes renderTableFooter(), intitializes the entire program
 renderTableFooter();
 
 
