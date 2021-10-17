@@ -140,3 +140,7 @@ th:last-of-type{
 tfoot td:last-of-type{
     color:#ff6666;
 }
+
+tfoot tr{
+    color:#196619;
+}
