@@ -4,7 +4,7 @@ let times = ['Store Location', '0600 AM', '0700 AM', '0800 AM', '0900 AM', '1000
     '1200 PM', '0100 PM', '0200 PM', '0300 PM', '0400 PM', '0500 PM', '0600 PM', '0700 PM', 'Daily Location Total'];
 let cookieStoresTotalSalesArray = [];
 let totalSalesPerHourArray = [];
-let storeObjectsArray = [];
+let storeInstanceArray = [];
 //Grab the anchor table elements
 let cookieStoreHeader = document.getElementById('cookieStoreHeader')
 let cookieStoreSales = document.getElementById('cookieStoreSales');
@@ -18,8 +18,7 @@ function CookieStore(location, min, max, avg) {
     this.cookiesSoldEachHourArray = [];
     //Generates randoom cookie sales per hour
     this.getCookieSalesPerHour = function () {
-        let randomNumber = Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
-        let cookiesPerHour = Math.ceil(randomNumber * this.avg);
+        let cookiesPerHour = Math.ceil((Math.random() * (this.max - this.min + 1) + this.min) * this.avg);
         return cookiesPerHour;
     };
     //Renders tbody section of the Table
@@ -40,9 +39,9 @@ function CookieStore(location, min, max, avg) {
         totalSalesPerStore.textContent = sum;
         storeLocation.appendChild(totalSalesPerStore);
     };
-    storeObjectsArray.push(this);
+    storeInstanceArray.push(this);
 }
-//Five instances of the object
+//Instances of the CookieStore object
 new CookieStore('Seattle', 23, 65, 6.3);
 new CookieStore('Tokyo', 3, 24, 1.2);
 new CookieStore('Dubai', 11, 38, 3.7);
@@ -55,8 +54,8 @@ function renderCookieStoreTableHeader() {
         th.textContent = times[i];
         cookieStoreHeader.appendChild(th);
     }
-    for (let i = 0; i < storeObjectsArray.length; i++) {
-        storeObjectsArray[i].renderTableTbody();
+    for (let i = 0; i < storeInstanceArray.length; i++) {
+        storeInstanceArray[i].renderTableTbody();
     }
 }
 //Function that renders the table footer
@@ -69,8 +68,8 @@ function renderTableFooter() {
     for (let i = 0; i < times.length - 2; i++) {
         let totalSalesPerHourinAllstores = 0;
         let totalSalesPerHour = document.createElement('td');
-        for (let j = 0; j < storeObjectsArray.length; j++) {
-            totalSalesPerHourinAllstores += storeObjectsArray[j].cookiesSoldEachHourArray[i];
+        for (let j = 0; j < storeInstanceArray.length; j++) {
+            totalSalesPerHourinAllstores += storeInstanceArray[j].cookiesSoldEachHourArray[i];
             console.log(totalSalesPerHourinAllstores);
         }
         totalSalesPerHourArray.push(totalSalesPerHourinAllstores);
