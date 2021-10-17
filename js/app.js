@@ -43,7 +43,7 @@ function CookieStore(location, min, max, avg) {
     storeObjectsArray.push(this);
 }
 
-new CookieStore('Seattle', 3, 24, 1.2);
+new CookieStore('Seattle', 23, 65, 6.3);
 new CookieStore('Tokyo', 3, 24, 1.2);
 new CookieStore('Dubai', 11, 38, 3.7);
 new CookieStore('Paris', 20, 38, 2.3);
