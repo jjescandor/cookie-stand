@@ -1,11 +1,9 @@
 body{
-    background-color: #F0F8FF;
+    background-color: #FFFFFF;
     font-family: Georgia;
     color:#595959;
 }
 
-main
- 
 #cookie{
     width: 80rem;
 }
@@ -13,6 +11,18 @@ section{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    margin:2rem;
+}
+
+h2{
+    padding:1rem;
+    color:black;
+}
+
+nav{
+    display: flex;
+    justify-content:space-evenly;
+    background-color: #005580;;
 }
 
 section img{
@@ -49,21 +59,16 @@ header{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 #logo{
-    width:20rem;
+    width:10rem;
     margin:2rem
 }
 
 h1{
     font-size: 4rem;
-}
-nav{
-    display: flex;
-    flex-direction: space-between;
-
 }
 
 a:hover{
@@ -73,7 +78,7 @@ a:hover{
 
 a{
     text-decoration: none;
-    color:#595959;
+    color:white;
 }
 
 .nav{
@@ -112,9 +117,13 @@ table{
     background-color:#778899;
     border:1px solid grey;
     -webkit-box-shadow: 0 10px 6px -6px #777;
-    box-shadow: 0 10px 6px -6px #777;
+    box-shadow:
+     0 10px 6px -6px #777;
 }
 
+td{
+    color:#F0F8FF;
+}
 
 tr{
     color:#005580;
