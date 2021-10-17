@@ -1,5 +1,5 @@
 "use strict";
-let times = ['', '0600 AM', '0700 AM', '0800 AM', '0900 AM', '1000 AM', '1100 AM',
+let times = ['Store Location', '0600 AM', '0700 AM', '0800 AM', '0900 AM', '1000 AM', '1100 AM',
     '1200 PM', '0100 PM', '0200 PM', '0300 PM', '0400 PM', '0500 PM', '0600 PM', '0700 PM', 'Daily Location Total'];
 
 let cookieStoresTotalSalesArray = [];
