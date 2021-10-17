@@ -5,10 +5,12 @@ let columnsArray = ['Store Location', '0600 AM', '0700 AM', '0800 AM', '0900 AM'
 let cookieSalesPerStoreArray = [];
 let totalSalesPerHourArray = [];
 let storeInstanceArray = [];
-//HTML tags that are used as anchors for DOM manipulation 
+
+//Tags in sales.html that are used as anchors for DOM manipulation 
 let cookieStoreHeader = document.querySelector('thead');
 let cookieStoreSales = document.querySelector('tbody');
 let salesPerHourFooter = document.querySelector('tfoot')
+
 //Object constructor function
 function CookieStore(location, min, max, avg) {
     this.location = location;
@@ -21,7 +23,7 @@ function CookieStore(location, min, max, avg) {
         let cookiesPerHour = Math.ceil((Math.random() * (this.max - this.min + 1) + this.min) * this.avg);
         return cookiesPerHour;
     };
-    //Renders tbody section of the Table
+    //Renders tbody section of the Table which is invoked in renderCookieStoreTableHeader()
     this.renderTableTbody = function () {
         let storeLocation = document.createElement('tr');
         storeLocation.textContent = this.location
@@ -41,25 +43,30 @@ function CookieStore(location, min, max, avg) {
     };
     storeInstanceArray.push(this);
 }
+
 //Instances of the CookieStore object
 new CookieStore('Seattle', 23, 65, 6.3);
 new CookieStore('Tokyo', 3, 24, 1.2);
 new CookieStore('Dubai', 11, 38, 3.7);
 new CookieStore('Paris', 20, 38, 2.3);
 new CookieStore('Lima', 2, 16, 4.6);
-//Function that renders the table header
+
+//Renders the header section of the table
 function renderCookieStoreTableHeader() {
     for (let i = 0; i < columnsArray.length; i++) {
         let tableHeader = document.createElement('th');
         tableHeader.textContent = columnsArray[i];
         cookieStoreHeader.appendChild(tableHeader);
     }
+    //Invokes renderTableTbody() on all instances of CookieStore object
     for (let i = 0; i < storeInstanceArray.length; i++) {
         storeInstanceArray[i].renderTableTbody();
     }
 }
-//Function that renders the table footer
+
+//Renders footer section of the table
 function renderTableFooter() {
+    //Invokes renderCookieStoreTableHeader()
     renderCookieStoreTableHeader();
     let totalSalesHourTitle = document.createElement('tr');
     totalSalesHourTitle.textContent = 'Total';
@@ -76,6 +83,7 @@ function renderTableFooter() {
         totalSalesPerHourArray.push(totalSalesPerHourinAllstores);
         totalSalesPerHour.textContent = totalSalesPerHourArray[i];
         totalSalesHourTitle.appendChild(totalSalesPerHour);
+        //Stores the total number of sales from 6am - 7pm in all stores in a variable
         totalOfTotal += totalSalesPerHourinAllstores;
     }
     let totalSalesInAllStores = document.createElement('td');
@@ -85,6 +93,5 @@ function renderTableFooter() {
 //Invokes the entire program
 renderTableFooter();
 
-console.log(cookieSalesPerStoreArray)
 
 
