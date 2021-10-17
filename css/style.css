@@ -73,7 +73,6 @@ h1{
 
 a:hover{
     color:#99ff99;
-
 }
 
 a{
@@ -158,5 +157,6 @@ tfoot tr{
 
 td:hover{
     transform: scale(1.2);
+    color:orange;
     cursor:pointer;
 }
