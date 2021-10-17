@@ -31,7 +31,7 @@ h2{
 nav{
     display: flex;
     justify-content:space-evenly;
-    background-color: #005580;;
+    background-color: #005580;
 }
 
 section img{
@@ -151,18 +151,19 @@ th{
 }
 
 th:first-of-type{
-    color:#0040ff;
+    color:#005580;
 }
 th:last-of-type{
-    color:#0040ff;
+    color:#005580;
 }
 
 tfoot td:last-of-type{
     color:#ff6666;
+    background-color: #005580;
 }
 
 th:last-of-type{
-    color:#0040ff;
+    color:#005580;
 }
 
 tfoot tr{
