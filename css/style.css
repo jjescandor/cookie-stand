@@ -141,10 +141,11 @@ th{
 
 }
 
-
+th:first-of-type{
+    color:#0040ff;
+}
 th:last-of-type{
     color:#0040ff;
-    
 }
 
 tfoot td:last-of-type{
