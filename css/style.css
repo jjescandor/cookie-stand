@@ -161,6 +161,10 @@ tfoot td:last-of-type{
     color:#ff6666;
 }
 
+th:last-of-type{
+    color:#0040ff;
+}
+
 tfoot tr{
     color:#ff6666;
 }
