@@ -117,12 +117,11 @@ tr, td, th{
     padding:1rem;
     text-align: center;
     border-radius: 1%;
-    border:0.01px solid lightgrey;
+    border:0.01px solid #696969;
 }
 
 table{
     margin:1rem;
-    border:1px solid grey;
     -webkit-box-shadow: 0 10px 6px -6px #777;
     box-shadow:
      0 10px 6px -6px #777;
