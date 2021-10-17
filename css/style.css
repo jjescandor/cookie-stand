@@ -6,12 +6,21 @@ body{
 
 #cookie{
     width: 80rem;
+    border-radius: 0.5%;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
 }
 section{
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     margin:2rem;
+}
+
+.about-section{
+    display: flex;
+    flex-direction: column;
+    margin:1rem 10rem;
 }
 
 h2{
@@ -64,7 +73,7 @@ header{
 
 #logo{
     width:10rem;
-    margin:2rem
+    margin:2rem;
 }
 
 h1{
