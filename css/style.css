@@ -87,6 +87,10 @@ a{
     width: 100px;
 }
 
+caption{
+    font-size: 2rem;
+    padding:1.5rem;
+}
 
 th, tr{
     font-weight: bold;
