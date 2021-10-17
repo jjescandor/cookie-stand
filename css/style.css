@@ -115,18 +115,28 @@ table{
     box-shadow: 0 10px 6px -6px #777;
 }
 
-tfoot td{
+
+tr{
     color:#005580;
+}
+tfoot td{
+    color: #ffcccc;
 }
 
 tr td:last-child{
     color:  #ffcc99;
 }
-
-th:last-of-type{
+th{
     color: #b3e0ff;
+
 }
 
-td:last-of-type{
-    color:white;
+
+th:last-of-type{
+    color:#0040ff;
+    
+}
+
+tfoot td:last-of-type{
+    color:#ff6666;
 }
