@@ -51,7 +51,7 @@ nav h2{
     height: 46px;
     padding: 5px;
 }
-  
+
 .social-media {
     display: flex;
     flex-direction: row;
@@ -120,16 +120,43 @@ section div{
     -webkit-box-shadow: 0 10px 6px -6px #777;
     box-shadow: 0 10px 6px -6px #777;
 }
+li{
+    padding:5px;
+    color:#F0F8FF;
+    font-weight: bold;
+}
+
+#seattle-store,
+#tokyo-store,
+#dubai-store,
+#paris-store,
+#lima-store{
+    width:14rem;
+}
+
+h3{
+    padding:10px;
+    font-size: 1.2rem;
+    color:#99ff99;
+    font-weight: bold;
+}
+
+h4{
+    color: #b3e0ff;
+    padding:5px;
+    font-weight: bold;
+}
 
 ul li:last-child{
     font-weight: bold;
+    color:  #ffcc99;
+
 }
 
 div h2{
     margin: 1rem;
     font-weight: bold;
 }
-
 
 header{
     display: flex;
@@ -150,25 +177,26 @@ h1{
     border-top:0.25px solid grey;
     border-bottom: 0.25px solid grey;
     padding:10px;
+    font-family: Calibri;
 }
 
 a:hover{
-    color:#8FBC8F
+    color:#595959;
+    border-bottom: 1px solid #99ff99;
+    border-top: 1px solid #99ff99;
     
 }
 
 a{
     text-decoration: none;
     color:#005580;
-    
+    font-family: Roboto;
 }
 
 .nav{
     margin: 0 2rem;
     font-size: 2rem;
 }
-
-
 
 #store-logo{
     width: 100px;
@@ -183,10 +211,6 @@ th, tr{
     font-weight: bold;
 }
 
-td{
-    color:darkgrey;
-}
-
 tr, td, th{
     padding:1rem;
     text-align: center;
@@ -198,7 +222,7 @@ table{
     margin:1rem;
     -webkit-box-shadow: 0 10px 6px -6px #777;
     box-shadow:
-     0 10px 6px -6px #777;
+    0 10px 6px -6px #777;
 }
 
 td{
@@ -221,12 +245,12 @@ tr td:last-child{
 th{
     background-color:#708090;
     color: #b3e0ff;
-
 }
 
 th:first-of-type{
     color:#005580;
 }
+
 th:last-of-type{
     color:#005580;
 }

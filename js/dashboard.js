@@ -9,11 +9,11 @@ function cookieStoreDashboard() {
     for (let i = 0; i < cookieStoreDashBoardArray.length; i++) {
         storelocationName = document.createElement('h3');
         minimumCookiesale = document.createElement('h4');
-        minimumCookiesale.textContent = `Min cookie sold: ${storeInstanceArray[i].min}`;
+        minimumCookiesale.textContent = `Min cookies sold: ${storeInstanceArray[i].min}`;
         maximumCookiesale = document.createElement('h4');
-        maximumCookiesale.textContent = `Max cookie sold: ${storeInstanceArray[i].max}`;
+        maximumCookiesale.textContent = `Max cookies sold: ${storeInstanceArray[i].max}`;
         avgCookiesale = document.createElement('h4');
-        avgCookiesale.textContent = `Avg cookie sold: ${storeInstanceArray[i].avg}`;
+        avgCookiesale.textContent = `Avg cookies sold: ${storeInstanceArray[i].avg}`;
         storelocationName.textContent = storeInstanceArray[i].location;
         cookieStoreDashBoardArray[i].append(storelocationName, minimumCookiesale,
             maximumCookiesale, avgCookiesale);
@@ -23,7 +23,7 @@ function cookieStoreDashboard() {
             cookieStoreDashBoardArray[i].appendChild(cookieStoreLi);
         }
         let seattleTotal = document.createElement('li');
-        seattleTotal.textContent = `Total Cookes Sold: ${cookieSalesPerStoreArray[i]}  `
+        seattleTotal.textContent = `Total Cookies Sold: ${cookieSalesPerStoreArray[i]}  `
         cookieStoreDashBoardArray[i].appendChild(seattleTotal);
     }
 }
