@@ -9,7 +9,7 @@ let storeInstanceArray = [];
 //Tags in sales.html that are used as anchors for DOM manipulation 
 let cookieStoreHeader = document.querySelector('thead');
 let cookieStoreSales = document.querySelector('tbody');
-let salesPerHourFooter = document.querySelector('tfoot')
+let salesPerHourFooter = document.querySelector('tfoot');
 
 //Object constructor function
 function CookieStore(location, min, max, avg) {
@@ -27,7 +27,7 @@ function CookieStore(location, min, max, avg) {
     //Renders tbody section of the Table which is invoked in renderCookieStoreTableHeader()
     this.renderTableTbody = function () {
         let storeLocation = document.createElement('tr');
-        storeLocation.textContent = this.location
+        storeLocation.textContent = this.location;
         cookieStoreSales.appendChild(storeLocation);
         let sumPerStore = 0;
         for (let i = 0; i < columnsArray.length - 2; i++) {
