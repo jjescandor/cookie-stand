@@ -93,6 +93,3 @@ function renderTableFooter() {
 }
 //Invokes renderTableFooter(), intitializes the entire program
 renderTableFooter();
-
-
-
