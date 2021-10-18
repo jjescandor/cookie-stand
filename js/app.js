@@ -18,7 +18,7 @@ function CookieStore(location, min, max, avg) {
     this.max = max;
     this.avg = avg;
     this.cookiesSoldEachHourArray = [];
-    //Generates randoom cookie sales per hour
+    //Generates random cookie sales per hour
     this.getCookieSalesPerHour = function () {
         let cookiesPerHour = Math.ceil(Math.floor(Math.random() * (this.max - this.min + 1)
             + this.min) * this.avg);

@@ -100,8 +100,11 @@ nav{
     display: flex;
     justify-content:space-evenly;
     background-color:#FFDAA3;
+    opacity:0.9;
     height:4rem;
     align-items: center;
+    position:sticky;
+    top: 50px;
 }
 
 section img{
