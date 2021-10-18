@@ -15,10 +15,8 @@ function cookieStoreDashboard() {
         avgCookiesale = document.createElement('h4');
         avgCookiesale.textContent = `Avg cookie sold: ${storeInstanceArray[i].avg}`;
         storelocationName.textContent = storeInstanceArray[i].location;
-        cookieStoreDashBoardArray[i].appendChild(storelocationName);
-        cookieStoreDashBoardArray[i].appendChild(minimumCookiesale);
-        cookieStoreDashBoardArray[i].appendChild(maximumCookiesale);
-        cookieStoreDashBoardArray[i].appendChild(avgCookiesale);
+        cookieStoreDashBoardArray[i].append(storelocationName, minimumCookiesale,
+            maximumCookiesale, avgCookiesale);
         for (let j = 0; j < columnsArray.length - 2; j++) {
             let cookieStoreLi = document.createElement('li');
             cookieStoreLi.textContent = `${columnsArray[j + 1]} : ${storeInstanceArray[i].cookiesSoldEachHourArray[j]} `;
