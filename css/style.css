@@ -11,7 +11,7 @@ body{
     box-shadow: 0 10px 6px -6px #777;
 }
 
-#ig {
+#ig{
     transition-duration: 1.5s;
     width: 46px;
     height: 46px;
@@ -19,8 +19,7 @@ body{
     padding: 5px;
 }
 
-#facebook {
-
+#facebook{
     transition-duration: 1.5s;
     width: 42px;
     height: 42px;
@@ -28,9 +27,16 @@ body{
     padding: 5px;
 }
 
-#twitter {
+#twitter{
     transition-duration: 1.5s;
     width: 54px;
+    height: 46px;
+    padding: 5px;
+}
+
+#cart{
+    transition-duration: 1.5s;
+    width: 48px;
     height: 46px;
     padding: 5px;
 }
@@ -49,7 +55,8 @@ body{
 #twitter:hover,
 #facebook:hover,
 #git:hover,
-#ig:hover {
+#ig:hover,
+#cart:hover{
     border-bottom: 2.5px solid orange;
     border-radius: 5%;
     box-shadow: none;
@@ -126,6 +133,9 @@ header{
 
 h1{
     font-size: 4rem;
+    border-top:0.25px solid grey;
+    border-bottom: 0.25px solid grey;
+    padding:10px;
 }
 
 a:hover{
