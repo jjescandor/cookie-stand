@@ -6,7 +6,10 @@ body{
 
 .promo-banner{
     height:50px;
+    opacity:0.9;
     background-color:#005580;
+    position: sticky;
+    top:0;
 }
 
 nav h2{
