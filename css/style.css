@@ -236,29 +236,35 @@ td{
     background-color: #778899;
 }
 
-tr{
+tbody td:first-of-type{
     background-color:#708090;
     color:#99ff99;
 }
 
-tfoot td{
+tfoot tr{
     color: #ffcccc;
+    background-color:#708090;
 }
 
-tr td:last-child{
+tbody td:last-child{
     color:  #ffcc99;
 }
-th{
+
+thead td{
     background-color:#708090;
     color: #b3e0ff;
 }
 
-th:first-of-type{
+thead td:first-of-type{
     color:#005580;
 }
 
-th:last-of-type{
+thead td:last-of-type{
     color:#005580;
+}
+
+thead td{
+    background-color:#708090;
 }
 
 tfoot td:last-of-type{
@@ -266,12 +272,9 @@ tfoot td:last-of-type{
     background-color: #005580;
 }
 
-th:last-of-type{
-    color:#005580;
-}
-
-tfoot tr{
+tfoot td:first-of-type{
     color:#ff6666;
+    background-color: #005580;
 }
 
 td:hover{
