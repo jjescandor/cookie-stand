@@ -7,7 +7,7 @@ let totalSalesPerHourArray = [];
 let storeInstanceArray = [];
 
 //Tags in sales.html that are used as anchors for DOM manipulation 
-let cookieStoreHeader = document.querySelector('thead');
+let cookieStoreHeader = document.querySelector('thead tr');
 let cookieStoreSales = document.querySelector('tbody');
 let salesPerHourFooter = document.querySelector('tfoot');
 
@@ -26,21 +26,23 @@ function CookieStore(location, min, max, avg) {
     };
     //Renders tbody section of the Table which is invoked in renderCookieStoreTableHeader()
     this.renderTableTbody = function () {
-        let storeLocation = document.createElement('tr');
+        let trStoreLocation = document.createElement('tr');
+        cookieStoreSales.appendChild(trStoreLocation);
+        let storeLocation = document.createElement('td');
         storeLocation.textContent = this.location;
-        cookieStoreSales.appendChild(storeLocation);
+        trStoreLocation.appendChild(storeLocation);
         let sumPerStore = 0;
         for (let i = 0; i < columnsArray.length - 2; i++) {
             this.cookiesSoldEachHourArray.push(this.getCookieSalesPerHour());
             sumPerStore += this.cookiesSoldEachHourArray[i];
             let cookieSalesPerHour = document.createElement('td');
             cookieSalesPerHour.textContent = this.cookiesSoldEachHourArray[i];
-            storeLocation.appendChild(cookieSalesPerHour);
+            trStoreLocation.appendChild(cookieSalesPerHour);
         }
         cookieSalesPerStoreArray.push(sumPerStore);
         let totalSalesPerStore = document.createElement('td');
         totalSalesPerStore.textContent = sumPerStore;
-        storeLocation.appendChild(totalSalesPerStore);
+        trStoreLocation.appendChild(totalSalesPerStore);
     };
     storeInstanceArray.push(this);
 }
@@ -55,7 +57,7 @@ new CookieStore('Lima', 2, 16, 4.6);
 //Renders the header section of the table
 function renderCookieStoreTableHeader() {
     for (let i = 0; i < columnsArray.length; i++) {
-        let tableHeader = document.createElement('th');
+        let tableHeader = document.createElement('td');
         tableHeader.textContent = columnsArray[i];
         cookieStoreHeader.appendChild(tableHeader);
     }
@@ -69,27 +71,29 @@ function renderCookieStoreTableHeader() {
 function renderTableFooter() {
     //Invokes renderCookieStoreTableHeader()
     renderCookieStoreTableHeader();
-    let totalSalesHourTitle = document.createElement('tr');
+    let trTotal = document.createElement('tr');
+    salesPerHourFooter.appendChild(trTotal);
+    let totalSalesHourTitle = document.createElement('td');
     totalSalesHourTitle.textContent = 'Total';
-    salesPerHourFooter.appendChild(totalSalesHourTitle);
+    trTotal.appendChild(totalSalesHourTitle);
     let totalOfTotal = 0;
     //Finds the total number of cookies sold per hour in all stores
     for (let i = 0; i < columnsArray.length - 2; i++) {
         let totalSalesPerHourinAllstores = 0;
-        let totalSalesPerHour = document.createElement('td');
+        let totalSalesPerHour = document.createElement('th');
         for (let j = 0; j < storeInstanceArray.length; j++) {
             totalSalesPerHourinAllstores += storeInstanceArray[j].cookiesSoldEachHourArray[i];
             totalSalesPerHourinAllstores;
         }
         totalSalesPerHourArray.push(totalSalesPerHourinAllstores);
         totalSalesPerHour.textContent = totalSalesPerHourArray[i];
-        totalSalesHourTitle.appendChild(totalSalesPerHour);
+        trTotal.appendChild(totalSalesPerHour);
         //Stores the total number of sales from 6am - 7pm in all stores in a variable
         totalOfTotal += totalSalesPerHourinAllstores;
     }
     let totalSalesInAllStores = document.createElement('td');
     totalSalesInAllStores.textContent = totalOfTotal;
-    totalSalesHourTitle.appendChild(totalSalesInAllStores);
+    trTotal.appendChild(totalSalesInAllStores);
 }
 //Invokes renderTableFooter(), intitializes the entire program
 renderTableFooter();
