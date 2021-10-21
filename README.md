@@ -4,7 +4,7 @@
 
 ### The store is open from 0600 AM to 0700 PM and the dashboards shows the sales per hour in every store.
 
-### The Rendered page for this lab can be found [here:](https://jjescandor.github.io/cookie-stand/sales.html)
+### The Rendered page for this lab can be found [here:](https://jjescandor.github.io/cookie-stand/index.html)
 
 ### 
 
