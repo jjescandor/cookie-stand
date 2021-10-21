@@ -299,7 +299,10 @@ footer{
     min-height:400px;
   }
 
- 
+.address-img:hover,
+.cookie-img:hover{
+  opacity:0.5;
+}
   
   .dark-mode{
     pointer-events:auto;  
