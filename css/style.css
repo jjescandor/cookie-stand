@@ -10,6 +10,7 @@ body{
     background-color:#005580;
     position: sticky;
     top:0;
+    z-index:10;
 }
 
 nav h2{
@@ -78,20 +79,21 @@ nav h2{
     transition-duration: 0.65s;
 }  
 
-section{
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    margin:2rem;
-}
-
-.about-section{
+.about-section,
+.featured-products,
+.store-locations{
     display: flex;
     flex-direction: column;
-    margin:1rem 10rem;
+    margin:3rem 10rem;
+}
+
+.featured-products{
+  display: flex;
+  align-items: center;
 }
 
 h2{
+ 
     padding:1rem;
     color:black;
 }
@@ -107,10 +109,6 @@ nav{
     top: 50px;
 }
 
-section img{
-    margin: 5rem;
-}
-
 .main-section{
     display: flex;
     flex-direction: row;
@@ -118,14 +116,6 @@ section img{
     align-items:center;
 }
 
-section div{
-    margin:2rem;
-    background-color: #778899;
-    border-radius: 1%;
-    border: 1px solid lightslategrey;
-    -webkit-box-shadow: 0 10px 6px -6px #777;
-    box-shadow: 0 10px 6px -6px #777;
-}
 li{
     padding:5px;
     color:#F0F8FF;
@@ -190,13 +180,16 @@ a:hover{
     color:#595959;
     border-bottom: 1px solid #99ff99;
     border-top: 1px solid #99ff99;
-    
+    margin-left: 2rem;
+    transition-duration: 1s;
+    margin-right: -2rem;
 }
 
 a{
     text-decoration: none;
     color:#005580;
     font-family: Roboto;
+    transition-duration;
 }
 
 .nav{
@@ -277,11 +270,295 @@ tfoot td:first-of-type{
     background-color: #005580;
 }
 
+span{
+    color:#ff6666;
+}
+
 td:hover{
     color:orange;
     cursor:pointer;
 }
 
 footer{
-    height: 20rem;
+  display:flex;
+  height: 20rem;
 }
+
+/*landing page*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  .product-img{
+    width:80%;
+    height:650px;
+    min-width:700px;
+    min-height:400px;
+  }
+
+ 
+  
+  .dark-mode{
+    pointer-events:auto;  
+  }
+  
+  .main-banner{
+    width: 100%;
+    height: 700px;
+    background: #EBEEEF;
+    position: relative;
+  }
+  
+  .main-banner span{
+    font-size: 100px;
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    line-height: 50px;
+    width: 60px;
+    height: 70px;
+    border-radius; 10px;
+    background: #00000040;
+    color: white;
+    cursor: pointer;
+    z-index: 4;
+  }
+  
+  span#left-arrow{
+    left: 2px;
+  }
+  
+  span#right-arrow{
+    right: 1px;
+  }
+  
+  .main-banner section{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  section .banner{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    transition: 1s;
+    opacity: 0;
+    z-index:1;
+  }
+  
+  .banner.active{
+    opacity:1;
+    z-index: 2;
+    animation:display 1s;
+  }
+  .banner.active.left{
+    animation: left_slide 1s;
+  }
+  
+  .product-details button{
+    background-color: #778899;
+    color: white;
+  }
+  
+  @keyframes display{
+    0%{
+      left:100%;
+    }
+    100%{
+      left:0;
+    }
+  }
+  
+  @keyframes left_slide{
+    0%{
+      left:-100%;
+    }
+    100%{
+      left:0;
+    }
+  }
+  
+  .banner .product-details{
+    width:50%;
+    padding: 0 0 0 50px;
+  }
+  
+  .product-details h2{
+    font-size: 70px;
+  }
+  
+  .product-details .superstar{
+    text-shadow: 0.5px 1.5px #ff9933;
+  }
+  
+  .product-details .monogram{
+    text-shadow: 0.5px 1.5px #ffff80;
+  }
+  
+  .product-details .prime{
+    text-shadow: 0.5px 1.5px #80ffff;
+  }
+  
+  .product-details p{
+    font-size: 20px;
+  }
+  
+  .product-details button{
+    text-decoration: none;
+    color: white;
+    font-size:17px;
+    padding: 10px 20px;
+    margin: 20px 0 0 0;
+    display: inline-block;
+    border-radius: 20px;
+    border: 2px solid #e1e1e1;
+  }
+  
+  .product-details button:hover{
+    transform:scale(1.15,0.1.15);
+     -webkit-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+    transition-duration:0.5s;
+  }
+  .product-details button:active{
+    transform:scale(0.9,0.9);
+  }
+  .banner picture{
+    width: 90%;
+  }
+  
+  blockquote{
+    width: 50%;
+    height: 50px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  blockquote p{
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    margin: 5px 15px;
+    cursor: pointer;
+    border: 5px double #e5e5e5;
+    border-radius:20px;
+ }
+
+p.actual{
+    background: #dfdfdf;
+}
+
+section h2{
+    font-size: 3rem;
+}
+
+section p{
+font-size:1.5rem;
+}
+
+footer{
+    height: 20rem;
+    background-color: grey;
+}
+
+.cookie-store-img{
+    float:right;
+    width:900px;
+    border-radius: 2px;
+    margin: 0 0 3rem 3rem;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+.cookie-img{
+    width:30%;
+    margin-bottom: 3rem;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+.cookie-products{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.store-locations{
+  display: flex;
+  align-items: center;
+}
+
+.store-address{
+  display: flex;
+  flex-direction: row;
+}
+  
+.address-img{
+  margin-bottom: 2rem;
+  width: 250px;
+  height:380px;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+address{
+  margin:1rem;
+  line-height: 2rem;
+  font-size:1.2rem;
+}
+
+.footer{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.terms-of-service{
+  margin:2rem;
+  font-size: 1.1rem;
+}
+
+input{
+  margin-top:1rem;
+  width:18rem;
+  height:2rem;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.email-sign-up button{
+  color:white;
+  width:5rem;
+  height:2rem;
+  background-color: #005580;
+  border:none;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  font-size: 1rem;
+}
+
+.email-sign-up button:hover{
+  transform: scale(1.05);
+  background-color: #3A4A58;
+}
+
+.email-sign-up button:active{
+  transform: scale(1);
+}
+
+h5{
+  font-size: 1.2rem;
+  color:#005580;
+}
+
