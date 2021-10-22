@@ -107,6 +107,7 @@ nav{
     align-items: center;
     position:sticky;
     top: 50px;
+    z-index: 8;
 }
 
 .main-section{
