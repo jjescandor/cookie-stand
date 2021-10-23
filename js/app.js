@@ -69,10 +69,9 @@ const pas = () => {
     blockQuote.children[index].classList.add('actual');
 }
 
-let locationBtn = document.querySelector('#location');
-console.log(locationBtn);
-let storeName = locationBtn.value;
-console.log(storeName);
+
+
+
 
 
 

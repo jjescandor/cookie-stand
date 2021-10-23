@@ -7,6 +7,8 @@ let totalSalesPerHourArray = [];
 let storeInstanceArray = [];
 let cookieStoreDashBoardArray = [];
 
+let submitBtn = document.querySelector('#form');
+
 //Tags in sales.html that are used as anchors for DOM manipulation 
 let cookieStoreHeader = document.querySelector('thead tr');
 let cookieStoreSales = document.querySelector('tbody');
@@ -67,6 +69,7 @@ function renderCookieStoreTableHeader() {
         storeInstanceArray[i].renderTableTbody();
     }
 }
+
 renderCookieStoreTableHeader();
 
 //Renders footer section of the table
@@ -86,7 +89,7 @@ function renderTableFooter() {
             totalSalesPerHourinAllstores += storeInstanceArray[j].cookiesSoldEachHourArray[i];
         }
         totalSalesPerHourArray.push(totalSalesPerHourinAllstores);
-        totalSalesPerHour.textContent = totalSalesPerHourArray[i];
+        totalSalesPerHour.textContent = totalSalesPerHourinAllstores;
         trTotal.appendChild(totalSalesPerHour);
         //Stores the total number of sales from 6am - 7pm in all stores in a variable
         totalOfTotal += totalSalesPerHourinAllstores;
@@ -98,32 +101,62 @@ function renderTableFooter() {
 //Invokes renderTableFooter(), intitializes the entire program
 renderTableFooter();
 
-cookieStoreDashBoardArray.push(document.querySelector('#seattle'),
-    document.querySelector('#tokyo'),
-    document.querySelector('#dubai'),
-    document.querySelector('#paris'),
-    document.querySelector('#lima'));
+let isNewStore = true;
 
-function cookieStoreDashboard() {
-    for (let i = 0; i < cookieStoreDashBoardArray.length; i++) {
-        let storelocationName = document.createElement('h3');
-        let minimumCookiesale = document.createElement('h4');
-        minimumCookiesale.textContent = `Min : ${storeInstanceArray[i].min}`;
-        let maximumCookiesale = document.createElement('h4');
-        maximumCookiesale.textContent = `Max : ${storeInstanceArray[i].max}`;
-        let avgCookiesale = document.createElement('h4');
-        avgCookiesale.textContent = `Avg : ${storeInstanceArray[i].avg}`;
-        storelocationName.textContent = storeInstanceArray[i].location;
-        cookieStoreDashBoardArray[i].append(storelocationName, minimumCookiesale,
-            maximumCookiesale, avgCookiesale);
-        for (let j = 0; j < columnsArray.length - 2; j++) {
-            let cookieStoreLi = document.createElement('li');
-            cookieStoreLi.textContent = `${columnsArray[j + 1]} : ${storeInstanceArray[i].cookiesSoldEachHourArray[j]} `;
-            cookieStoreDashBoardArray[i].appendChild(cookieStoreLi);
+function storeMaker(event) {
+    event.preventDefault();
+    let storeName = event.target.location.value;
+    let minField = parseInt(event.target.minimum.value);
+    let maxField = parseInt(event.target.maximum.value);
+    let aveField = parseInt(event.target.average.value);
+    for (let i = 0; i < storeInstanceArray.length; i++) {
+        if (storeName.toLowerCase() === storeInstanceArray[i].location.toLowerCase()) {
+            alert("Store already exist");
+            isNewStore = false;
+            break;
         }
-        let seattleTotal = document.createElement('li');
-        seattleTotal.innerHTML = `Total Cookies Sold: ${cookieSalesPerStoreArray[i]}`
-        cookieStoreDashBoardArray[i].appendChild(seattleTotal);
     }
+    if (isNewStore) {
+        storeName = new CookieStore(storeName, minField, maxField, aveField);
+        storeName.renderTableTbody();
+        let footer = document.querySelector('tfoot tr:first-of-type');
+        footer.remove();
+        renderTableFooter()
+    }
+    event.target.location.value = '';
+    event.target.minimum.value = '';
+    event.target.maximum.value = '';
+    event.target.average.value = '';
 }
-cookieStoreDashboard();
+
+submitBtn.addEventListener('submit', storeMaker);
+
+// cookieStoreDashBoardArray.push(document.querySelector('#seattle'),
+//     document.querySelector('#tokyo'),
+//     document.querySelector('#paris'),
+//     document.querySelector('#lima'));
+
+// function cookieStoreDashboard() {
+//     for (let i = 0; i < cookieStoreDashBoardArray.length; i++) {
+//         let storelocationName = document.createElement('h3');
+//         let minimumCookiesale = document.createElement('h4');
+//         minimumCookiesale.textContent = `Min : ${storeInstanceArray[i].min}`;
+//         let maximumCookiesale = document.createElement('h4');
+//         maximumCookiesale.textContent = `Max : ${storeInstanceArray[i].max}`;
+//         let avgCookiesale = document.createElement('h4');
+//         avgCookiesale.textContent = `Avg : ${storeInstanceArray[i].avg}`;
+//         storelocationName.textContent = storeInstanceArray[i].location;
+//         cookieStoreDashBoardArray[i].append(storelocationName, minimumCookiesale,
+//             maximumCookiesale, avgCookiesale);
+//         for (let j = 0; j < columnsArray.length - 2; j++) {
+//             let cookieStoreLi = document.createElement('li');
+//             cookieStoreLi.textContent = `${columnsArray[j + 1]} : ${storeInstanceArray[i].cookiesSoldEachHourArray[j]} `;
+//             cookieStoreDashBoardArray[i].appendChild(cookieStoreLi);
+//         }
+//         let seattleTotal = document.createElement('li');
+//         seattleTotal.innerHTML = `Total Cookies Sold: ${cookieSalesPerStoreArray[i]}`
+//         cookieStoreDashBoardArray[i].appendChild(seattleTotal);
+//     }
+// }
+
+//cookieStoreDashboard()

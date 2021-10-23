@@ -439,6 +439,7 @@ section .banner{
     box-shadow: 0 10px 6px -6px #777;
     transition-duration:0.5s;
   }
+
   .product-details button:active{
     transform:scale(0.9,0.9);
   }
@@ -604,4 +605,50 @@ h5{
   display:flex;
   margin:3rem;
   justify-content: space-between;
+}
+
+fieldset input{
+  width:12rem;
+  margin: 0 0 15px 0;
+  border-radius: 10px;
+  border:0.5px solid grey;
+}
+
+fieldset{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin:1rem;
+  color:white;
+  font-size:1rem;
+}
+
+form{
+  width:1200px;
+  align-items: center;
+  margin: 1rem;
+  background-color: #778899;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+.add-store-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-store-section h3{
+  color: #3A4A58;
+}
+
+form fieldset #submit{
+  background-color: #005580;
+  color:white;
+  border:0.5px solid grey;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
 }

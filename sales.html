@@ -34,6 +34,26 @@
         <h2 class='nav'><a class='navigation' href='index.html#about'>About</a></h2>
         <h2 class='nav'><a class='navigation' href='index.html#about'>Contact Us</a></h2>
     </nav>
+    <section class='add-store-section'>
+        <h3>Create A New Store</h3>
+        <form id='form'>
+            <fieldset>
+                <label>Store Location<br>
+                    <input type='text' for='location' name='location' placeholder="Enter Store Location" required>
+                </label>
+                <label>Minimum number<br>
+                    <input type='number' for='minumum' name='minimum' placeholder="Enter Minimum Sales" required>
+                </label>
+                <label>Maximum number<br>
+                    <input type='number' for='maximum' name='maximum' placeholder="Enter Maximum Sales" requied>
+                </label>
+                <label>Average number<br>
+                    <input type='number' for='average' name='average' placeholder="Enter Average Customers"
+                        requied></label>
+                <button type='submit' id='submit'>Submit</button>
+            </fieldset>
+        </form>
+    </section>
     <section>
         <table>
             <caption>Daily Cookie Sales Dashboard</caption>
@@ -46,7 +66,7 @@
             </tfoot>
         </table>
     </section>
-    <section class='individual-dashboard'>
+    <!-- <section class='individual-dashboard'>
         <div id='seattle-store'>
             <ul id='seattle'></ul>
         </div>
@@ -62,22 +82,12 @@
         <div id='lima-store'>
             <ul id='lima'></ul>
         </div>
-    </section>
-    <section class='add-store-section'>
-        <fieldset>
-            <label for='location'>Store Location</label>
-            <input type='text' for='location' id='location'>
-            <label for='minimum'>Minimum number</label>
-            <input type='number' for='minumum' id='minimum'>
-            <label for='maximum'>Minimum number</label>
-            <input type='number' for='maximum' id='maximum'>
-            <input type='submit' value='Add Store'>
-        </fieldset>
-    </section>
+    </section> -->
+
     <footer>
         <div class='footer'>
             <h5>Sign up for our newsletter:</h5>
-            <div class="email-sign-up">
+            <div class=" email-sign-up">
                 <input class='email-form' type="text" placeholder="  your-email@example.com" />
                 <button id="sign-up">Sign Up</button>
             </div>
