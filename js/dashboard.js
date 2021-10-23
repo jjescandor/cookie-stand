@@ -106,12 +106,12 @@ cookieStoreDashBoardArray.push(document.querySelector('#seattle'),
 
 function cookieStoreDashboard() {
     for (let i = 0; i < cookieStoreDashBoardArray.length; i++) {
-        storelocationName = document.createElement('h3');
-        minimumCookiesale = document.createElement('h4');
+        let storelocationName = document.createElement('h3');
+        let minimumCookiesale = document.createElement('h4');
         minimumCookiesale.textContent = `Min : ${storeInstanceArray[i].min}`;
-        maximumCookiesale = document.createElement('h4');
+        let maximumCookiesale = document.createElement('h4');
         maximumCookiesale.textContent = `Max : ${storeInstanceArray[i].max}`;
-        avgCookiesale = document.createElement('h4');
+        let avgCookiesale = document.createElement('h4');
         avgCookiesale.textContent = `Avg : ${storeInstanceArray[i].avg}`;
         storelocationName.textContent = storeInstanceArray[i].location;
         cookieStoreDashBoardArray[i].append(storelocationName, minimumCookiesale,

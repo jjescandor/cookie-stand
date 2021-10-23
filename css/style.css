@@ -129,6 +129,11 @@ li{
 #paris-store,
 #lima-store{
     width:14rem;
+    padding:1rem;
+    background-color:#708090;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+    border-radius: 5px;
 }
 
 h3{
@@ -567,3 +572,36 @@ h5{
   color:#005580;
 }
 
+.add-store-section{
+  display: flex;
+  justify-content: center;
+  margin: 5rem 0;
+}
+
+.add-store-section input{
+  border-radius: 2px;
+}
+
+.add-store-section button{
+  width: 10rem;
+  height: 2rem;
+  background-color: #3A4A58;
+  font-size: 1rem;
+  color:white;
+}
+
+.add-store-section button:hover{
+  transform: scale(1.05);
+  transition-duration: 350ms;
+}
+
+.add-store-section button:active{
+  transform: scale(1);
+  transition-duration: 350ms;
+}
+
+.individual-dashboard{
+  display:flex;
+  margin:3rem;
+  justify-content: space-between;
+}

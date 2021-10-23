@@ -2,12 +2,13 @@
 
 //landing page JS Codee
 
-let arrowButtons = document.getElementsByTagName('span');
+let leftArrowButtons = document.querySelectorAll('#left-arrow');
+let rightArrowButtons = document.querySelectorAll('#right-arrow');
 let banner = document.getElementsByClassName('banner');
 let blockQuote = document.querySelector('blockquote');
 let index = 0;
 
-arrowButtons[1].onclick = () => {
+leftArrowButtons.onclick = () => {
     if (index == banner.length - 1) {
         index = 0;
     }
@@ -18,7 +19,7 @@ arrowButtons[1].onclick = () => {
     pas();
 }
 
-arrowButtons[0].onclick = () => {
+rightArrowButtons.onclick = () => {
     if (index == 0) {
         index = banner.length - 1;
     }
@@ -68,7 +69,10 @@ const pas = () => {
     blockQuote.children[index].classList.add('actual');
 }
 
-
+let locationBtn = document.querySelector('#location');
+console.log(locationBtn);
+let storeName = locationBtn.value;
+console.log(storeName);
 
 
 
