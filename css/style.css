@@ -606,7 +606,7 @@ form fieldset button{
 }
 
 form fieldset #submit:hover{
-  color:#99ff99;
+  color: #ffcccc;
   transform: scale(1.05);
   transition-duration: 350ms;
   
@@ -659,7 +659,8 @@ form{
 
 form fieldset #submit{
   background-color: #005580;
-  color:white;
+  color:#99ff99;
+  font-weight: bold;
   border:0.5px solid grey;
   border-radius: 5px;
   -webkit-box-shadow: 0 10px 6px -6px #777;
