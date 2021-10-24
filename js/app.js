@@ -2,7 +2,7 @@
 
 /*landing page JS Code*/
 
-let arrowButtons = document.getElementsByTagName('span');
+let arrowButtons = document.querySelectorAll('span');
 let banner = document.getElementsByClassName('banner');
 let blockQuote = document.querySelector('blockquote');
 let index = 0;

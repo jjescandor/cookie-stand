@@ -653,6 +653,7 @@ form{
 
 .add-store-section h3{
   color: #3A4A58;
+  font-size: 2rem;
 }
 
 form fieldset #submit{
@@ -675,4 +676,24 @@ section{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#cookie-dashboard{
+  margin:1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+body #cookie-dashboard div{
+  margin: 1rem 2rem;
+  background-color: #778899;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+body #cookie-dashboard div ul{
+  padding:1rem;
 }
