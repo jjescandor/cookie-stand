@@ -119,8 +119,7 @@ function storeMaker(event) {
     if (isNewStore) {
         storeName = new CookieStore(storeName, minField, maxField, aveField);
         storeName.renderTableTbody();
-        let footer = document.querySelector('tfoot tr:first-of-type');
-        footer.remove();
+        document.querySelector('tfoot tr:first-of-type').remove();
         renderTableFooter()
     }
     event.target.location.value = '';
