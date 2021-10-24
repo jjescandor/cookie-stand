@@ -101,17 +101,18 @@ function renderTableFooter() {
 //Invokes renderTableFooter(), intitializes the entire program
 renderTableFooter();
 
-let isNewStore = true;
+
 
 function storeMaker(event) {
     event.preventDefault();
+    let isNewStore = true;
     let storeName = event.target.location.value;
     let minField = parseInt(event.target.minimum.value);
     let maxField = parseInt(event.target.maximum.value);
     let aveField = parseInt(event.target.average.value);
     for (let i = 0; i < storeInstanceArray.length; i++) {
         if (storeName.toLowerCase() === storeInstanceArray[i].location.toLowerCase()) {
-            alert("Store already exists");
+            alert(`${storeName} store already exists`);
             isNewStore = false;
             break;
         }
