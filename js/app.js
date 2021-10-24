@@ -1,44 +1,43 @@
 "use strict";
 
-//landing page JS Codee
+/*landing page JS Code*/
 
-let leftArrowButtons = document.querySelectorAll('#left-arrow');
-let rightArrowButtons = document.querySelectorAll('#right-arrow');
+let arrowButtons = document.getElementsByTagName('span');
 let banner = document.getElementsByClassName('banner');
 let blockQuote = document.querySelector('blockquote');
 let index = 0;
 
-leftArrowButtons.onclick = () => {
+arrowButtons[1].onclick = () => {
     if (index == banner.length - 1) {
         index = 0;
     }
     else {
         index++;
     }
-    showbanner();
-    pas();
+    show_banner();
+    pas()
 }
 
-rightArrowButtons.onclick = () => {
+arrowButtons[0].onclick = () => {
     if (index == 0) {
         index = banner.length - 1;
     }
     else {
         index--;
     }
-    showbanner();
-    leftslide();
+    show_banner();
+    left_slide();
     pas();
 }
 
-function showbanner() {
+const show_banner = () => {
     for (let i = 0; i < banner.length; i++) {
         banner[i].classList.remove('active');
     }
     banner[index].classList.add('active');
 }
 
-function leftslide() {
+const left_slide = () => {
     for (let i = 0; i < banner.length; i++) {
         banner[i].classList.remove('left');
     }
@@ -47,7 +46,7 @@ function leftslide() {
 
 //create dots 
 
-function dots() {
+const dots = () => {
     for (let i = 0; i < banner.length; i++) {
         let p = document.createElement('p');
         p.setAttribute('onlick', 'indicate(this)');
@@ -68,10 +67,3 @@ const pas = () => {
     }
     blockQuote.children[index].classList.add('actual');
 }
-
-
-
-
-
-
-
