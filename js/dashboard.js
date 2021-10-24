@@ -122,7 +122,7 @@ function storeMaker(event) {
         storeName = new CookieStore(storeName, minField, maxField, aveField);
         storeName.renderTableTbody();
         document.querySelector('tfoot tr:first-of-type').remove();
-        renderTableFooter()
+        renderTableFooter();
         reRenderIndividualDashboard();
     }
     event.target.location.value = '';
