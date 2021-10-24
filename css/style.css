@@ -207,9 +207,11 @@ a{
     width: 100px;
 }
 
-caption{
+section h3{
     font-size: 2rem;
     padding:1.5rem;
+    color: #3A4A58;
+
 }
 
 th, tr{
@@ -609,7 +611,7 @@ h5{
 
 fieldset input{
   width:12rem;
-  margin: 0 0 15px 0;
+  margin: 5px 0 15px 0;
   border-radius: 10px;
   border:0.5px solid grey;
 }
@@ -620,8 +622,8 @@ fieldset{
   justify-content: space-between;
   align-items: center;
   margin:1rem;
-  color:white;
   font-size:1rem;
+  color: #b3e0ff;
 }
 
 form{
@@ -655,4 +657,10 @@ form fieldset #submit{
 
 form fieldset #submit:active{
   color:orange;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

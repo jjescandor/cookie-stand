@@ -69,7 +69,6 @@ function renderCookieStoreTableHeader() {
         storeInstanceArray[i].renderTableTbody();
     }
 }
-
 renderCookieStoreTableHeader();
 
 //Renders footer section of the table
@@ -100,8 +99,6 @@ function renderTableFooter() {
 }
 //Invokes renderTableFooter(), intitializes the entire program
 renderTableFooter();
-
-
 
 function storeMaker(event) {
     event.preventDefault();
