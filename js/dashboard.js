@@ -129,7 +129,6 @@ function storeMaker(event) {
     event.target.minimum.value = '';
     event.target.maximum.value = '';
     event.target.average.value = '';
-    tableCount = 5;
 }
 
 submitBtn.addEventListener('submit', storeMaker);
