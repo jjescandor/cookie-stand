@@ -182,13 +182,23 @@ h1{
     font-family: Calibri;
 }
 
-a:hover{
-    color:#595959;
+#homeid:hover,
+#shopid:hover,
+#salesid:hover,
+#aboutid:hover{
+    color: #b3e0ff;
     border-bottom: 1px solid #99ff99;
     border-top: 1px solid #99ff99;
-    margin-left: 1rem;
+    margin-left: 2rem;
     transition-duration: 1s;
-    margin-right: -1rem;
+    margin-right: -2rem;
+}
+
+#contactusid:hover{
+  color: #b3e0ff;
+  border-bottom: 1px solid #99ff99;
+  border-top: 1px solid #99ff99;
+  transition-duration: 1s;
 }
 
 a{
