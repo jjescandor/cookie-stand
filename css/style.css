@@ -198,7 +198,9 @@ h1{
   color: #b3e0ff;
   border-bottom: 1px solid #99ff99;
   border-top: 1px solid #99ff99;
+  margin-left: 1rem;
   transition-duration: 1s;
+  margin-right: -1rem;
 }
 
 a{
