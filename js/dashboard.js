@@ -128,12 +128,15 @@ function storeMaker(event) {
 
 submitBtn.addEventListener('submit', storeMaker);
 
-// cookieStoreDashBoardArray.push(document.querySelector('#seattle'),
+
+
+// function cookieStoreDashboard() {
+
+//     for(let i=0;i
+//     cookieStoreDashBoardArray.push(document.querySelector('#seattle'),
 //     document.querySelector('#tokyo'),
 //     document.querySelector('#paris'),
 //     document.querySelector('#lima'));
-
-// function cookieStoreDashboard() {
 //     for (let i = 0; i < cookieStoreDashBoardArray.length; i++) {
 //         let storelocationName = document.createElement('h3');
 //         let minimumCookiesale = document.createElement('h4');
@@ -156,4 +159,4 @@ submitBtn.addEventListener('submit', storeMaker);
 //     }
 // }
 
-//cookieStoreDashboard()
+// cookieStoreDashboard()
