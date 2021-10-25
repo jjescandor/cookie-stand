@@ -111,7 +111,7 @@ function storeMaker(event) {
     let maxField = parseInt(event.target.maximum.value);
     let aveField = parseInt(event.target.average.value);
     for (let i = 0; i < storeInstanceArray.length; i++) {
-        if (storeName.toLowerCase() === storeInstanceArray[i].location.toLowerCase()) {
+        if (storeName.toLowerCase().replace(/\s+/g, '') === storeInstanceArray[i].location.toLowerCase()) {
             alert(`${storeName} store already exists`);
             isNewStore = false;
             break;
