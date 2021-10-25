@@ -94,5 +94,12 @@ section a{
 
 footer{
     height: 150px;
-    background-color: grey;
+    background-color: 
+    grey;
+}
+
+section a:hover{
+    background-color: bisque;
+    color: coral;
+    transition-duration: 350ms;
 }
