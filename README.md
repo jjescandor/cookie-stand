@@ -4,7 +4,7 @@
 
 ### The store is open from 0600 AM to 0700 PM and the dashboards shows the sales per hour in every store.
 
-### The Rendered page for this lab can be found [here:](https://jjescandor.github.io/cookie-stand/sales.html)
+### The Rendered page for this lab can be found [here:](https://jjescandor.github.io/cookie-stand/)
 
 ### For this lab, lab #8, we were tasked to create a wireframe for Pat's Salmon cookie Store.
 
