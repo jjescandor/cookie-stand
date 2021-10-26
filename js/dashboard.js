@@ -62,7 +62,7 @@ function renderCookieStoreTableHeader() {
     let cookieStoreHeaderTr = document.createElement('tr');
     cookieStoreHeader.appendChild(cookieStoreHeaderTr);
     for (let i = 0; i < columnsArray.length; i++) {
-        let tableHeader = document.createElement('td');
+        let tableHeader = document.createElement('th');
         tableHeader.textContent = columnsArray[i];
         cookieStoreHeaderTr.appendChild(tableHeader);
     }
@@ -125,10 +125,8 @@ function storeMaker(event) {
         renderTableFooter();
         reRenderIndividualDashboard();
     }
-    event.target.location.value = '';
-    event.target.minimum.value = '';
-    event.target.maximum.value = '';
-    event.target.average.value = '';
+    submitBtn.reset();
+
 }
 
 submitBtn.addEventListener('submit', storeMaker);
